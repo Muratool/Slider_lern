@@ -120,3 +120,42 @@
 .mid__elem{
     display: flex;
 }
+
+/* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */
+
+.slider__train {
+	width: 500px;
+	height: 300px;
+	position: relative;
+	margin: 0 auto;
+
+}
+.slider__train-img {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 1s;
+	position: absolute;
+}
+.slider__train-img.active {
+	opacity: 1;
+	transition: 1s;
+}
+.prev__train {
+	position: absolute;
+	left: 0;
+	height: 50px;
+	transform: translateY(-50%);
+	top: 50%;
+	z-index: 2;
+
+}
+
+.next__train {
+	position: absolute;
+	right: 0;
+	height: 50px;
+	transform: translateY(-50%);
+	top: 50%;
+	z-index: 2;
+}

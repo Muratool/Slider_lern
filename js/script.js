@@ -31,3 +31,39 @@ prev.addEventListener('click', () => {
 		show(images[imageIndex]);
 	}
 });
+
+const trainImages = document.querySelectorAll('.slider__train-img');
+const next__train = document.querySelector('.next__train');
+const prev__train = document.querySelector('.prev__train');
+
+let trainIndex = 0;
+
+function show_train(train_img) {
+	train_img.classList.add('active');
+}
+
+function hide_train(train_img) {
+	train_img.classList.remove('active');
+}
+
+next__train.addEventListener('click', () => {
+	hide_train(trainImages[trainIndex]);
+	trainIndex += 1;
+	if (trainIndex <= trainImages.length - 1) {
+		show_train(trainImages[trainIndex]);
+	} else {
+		trainIndex = 0;
+		show_train(trainImages[trainIndex]);
+	}
+});
+
+prev__train.addEventListener('click', () => {
+	hide_train(trainImages[trainIndex]);
+	trainIndex -= 1;
+	if (trainIndex >= 0) {
+		show_train(trainImages[trainIndex]);
+	} else {
+		trainIndex = trainImages.length - 1;
+		show_train(trainImages[trainIndex]);
+	}
+});
