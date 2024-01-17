@@ -1,31 +1,33 @@
 const images = document.querySelectorAll('.slider-img');
-const controlls = document.querySelectorAll('.controlls');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
 let imageIndex = 0;
 
-function show(index) {
-  images[imageIndex].classList.remove('active');
-  images[index].classList.add('active');
-  imageIndex = index;
+function show(img) {
+	img.classList.add('active');
 }
 
-controlls.forEach(e => {
-  e.addEventListener('click', () => {
-    if (EventTarget.classList.contains('prev')) {
-      let index = imageIndex - 1;
+next.addEventListener('click', () => {
+	if (imageIndex <= images.length - 1) {
+		images[imageIndex].classList.remove('active');
+		imageIndex += 1;
+		if (imageIndex <= images.length - 1) {
+			show(images[imageIndex]);
+		} else {
+			imageIndex = 0;
+			show(images[imageIndex]);
+		}
+	}
+});
 
-      if (index < 0) {
-        index = images.lenght - 1;
-      }
-
-      show(index);
-    } else if (Event.target.classList.contains('next')) {
-      let index = imageIndex + 1;
-
-      if (index >= images.length) {
-        index = 0;
-      }
-      show(index);
-    }
-  });
+prev.addEventListener('click', () => {
+	if (imageIndex >= 0) {
+		images[imageIndex].classList.remove('active');
+		imageIndex -= 1;
+		if (imageIndex < 0) {
+			imageIndex = images.length - 1;
+		}
+		show(images[imageIndex]);
+	}
 });

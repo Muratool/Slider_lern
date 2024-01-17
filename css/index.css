@@ -1,124 +1,122 @@
 * {
-    font-family: sans-serif;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    color: black;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	color: black;
 }
 
 .wrapper {
-    min-height: 100vh;
-    width: 100%;
-    background-image: url('/img/nikolay-grechushkin-2GR62VaM87w-unsplash.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+	min-height: 100vh;
+	width: 100%;
+	background-image: url('/img/nikolay-grechushkin-2GR62VaM87w-unsplash.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 .header {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(218, 241, 241);
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(218, 241, 241);
 
-    width: 100%;
+	width: 100%;
 }
 
 .header__menu {
-    width: 100%;
+	width: 100%;
 }
 
 .menu {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .menu1 {
-    text-align: center;
-    font-size: 20px;
-    display: flex;
-    width: 100%;
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	width: 100%;
 }
 
 .menu__item {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 .menu__item:not(:last-child) {
-    border-right: 1px solid black;
+	border-right: 1px solid black;
 }
 
 .menu__item-link {
-    background-color: coral;
-    padding: 15px;
-    display: block;
+	background-color: coral;
+	padding: 15px;
+	display: block;
 }
 
 .menu__item-link:hover {
-    background-color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
 }
 
-.content {}
-
 .content__title {
-    background-color: bisque;
-    font-size: 60px;
-    text-align: center;
+	background-color: bisque;
+	font-size: 60px;
+	text-align: center;
 }
 
 .content__text {
-    background-color: bisque;
-    font-size: 30px;
-    text-align: justify;
-    padding: 5%;
+	background-color: bisque;
+	font-size: 30px;
+	text-align: justify;
+	padding: 5%;
 }
 
 .content__empty {
-    height: 300px;
+	height: 300px;
 }
 
-.content__something {}
-
-.footer {}
-
-
-/* SLIDER */
+/* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */ /* SLIDER */
 
 .slider {
-    width: 500px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
+	width: 500px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+    margin: 0 auto;
 }
 
 .slider-img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	/* transition: opacity 0.5s ease; */
 }
 
 .slider-img.active {
-    opacity: 1;
+	opacity: 1;
 }
 
 .slider img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
 }
 
-.slider .prev{
-    left: 10px;
-    height: 50px;
+.slider .prev {
+	left: 10px;
+	height: 50px;
 }
 
 .slider .next {
-    right: 10px;
+	right: 10px;
+}
+
+.mid__elem{
+    display: flex;
 }
